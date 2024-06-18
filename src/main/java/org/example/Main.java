@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.observer.Impl.AvgMaxMinDisplay;
 import org.example.observer.Impl.CurrentConditionsDisplay;
 import org.example.observer.Impl.HeatIndexDisplay;
 import org.example.observer.Impl.WeatherData;
@@ -18,9 +19,9 @@ public class Main {
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
         HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
+        AvgMaxMinDisplay minMaxDisplay = new AvgMaxMinDisplay(weatherData);
         weatherData.setMeasurements(25, 58, 15);
 
         weatherData.setMeasurements(10, 74, 26);
-
     }
 }

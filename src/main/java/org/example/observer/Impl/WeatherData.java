@@ -13,7 +13,7 @@ public class WeatherData implements Subject {
     private List<Observer> observers;
 
     public WeatherData() {
-        this.observers = new ArrayList<Observer>();
+        this.observers = new ArrayList<>();
     }
 
     public float getTemperature() {
@@ -53,7 +53,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer: observers) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 }
